@@ -9,3 +9,18 @@ jobs:
     - name: Run a one-line script
       run: echo "Hello, world!"
 
+name: Deploy to Vercel
+on: [push] # Triggers the workflow on push events but can be configured for other events
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2 # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+
+    - name: Vercel Action
+      uses: amondnet/vercel-action@v20 # This is a community action to deploy to Vercel
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }} # Uses the secret token
+        vercel-org-id: ${{ secrets.VERCEL_ORG_ID }} # Your Vercel organization ID
+        vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }} # Your Vercel project ID
