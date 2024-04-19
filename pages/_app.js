@@ -6,7 +6,8 @@ import theme from '@hackclub/theme'
 import { ThemeProvider } from 'theme-ui'
 import ColorSwitcher from '../components/color-switcher'
 import Analytics from '../components/analytics.js'
-import { Provider as BalancerProvider } from 'react-wrap-balancer'
+import { Provider as BalancerProvider } from 'react-wrap-balancer
+import Head from 'next/head'
 
 export default class App extends NextApp {
   render() {
@@ -20,8 +21,7 @@ export default class App extends NextApp {
   }
 }
 
-import Head from 'next/head'
-import Meta from '@hackclub/meta'
+'
 
 <Meta
   as={Head}
