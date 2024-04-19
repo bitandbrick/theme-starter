@@ -19,3 +19,16 @@ export default class App extends NextApp {
     )
   }
 }
+
+import Head from 'next/head'
+import Meta from '@hackclub/meta'
+
+<Meta
+  as={Head}
+  name="Hack Club" // site name
+  title="Hackathons" // page title
+  description="List of upcoming high school hackathons" // page description
+  image="https://hackathons.hackclub.com/card.png" // large summary card image URL
+  color="#ec3750" // theme color
+  manifest="/site.webmanifest" // link to site manifest
+/>
